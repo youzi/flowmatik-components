@@ -2,10 +2,23 @@
   "name": "flowmatik-components",
   "version": "0.0.1",
   "description": "Flowmatik UI components library",
-  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write '{lib}/**/*.{js,css,json}'",
+    "lint": "eslint '{lib}/**/*.js' --fix"
   },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": ["standard", "standard-react", "prettier"],
+    "rules": {
+      "react/prop-types": 0
+    }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false
+  },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/flowmatik/flowmatik-components.git"
@@ -15,5 +28,23 @@
   "bugs": {
     "url": "https://github.com/flowmatik/flowmatik-components/issues"
   },
+  "devDependencies": {
+    "prettier": "^1.11.1",
+    "pre-commit": "^1.2.2",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-config-standard-react": "^6.0.0",
+    "aristotle":
+      "git+ssh://git@git.d.ops.com:x.ops.com/aristotle.git#2cc5a13726ea54da4ad983f55e80a8d6fa2288e7",
+    "babel-eslint": "^7.2.3",
+    "ava": "^0.25.0"
+  },
+
   "homepage": "https://github.com/flowmatik/flowmatik-components#readme"
 }
