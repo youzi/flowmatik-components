@@ -7,6 +7,7 @@
     "format": "prettier --write '{lib}/**/*.{js,css,json}'",
     "lint": "eslint '{lib}/**/*.js' --fix"
   },
+  "pre-commit": ["format", "lint"],
   "eslintConfig": {
     "parser": "babel-eslint",
     "extends": ["standard", "standard-react", "prettier"],
